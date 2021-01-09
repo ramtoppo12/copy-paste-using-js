@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy paste Using java script</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+    <h3>Copy to Clip Board</h3>
+    <input type="text" id="input-text" name="Enter your text">
+    <button type="submit" id="copy-text">Copy Text</button>
+    </div> 
+</body>
+<script>
+    var text = document.getElementById("input-text")
+    var btn = document.getElementById("copy-text")
+btn.onclick = ()=>{
+    text.select();
+    document.execCommand("copy");
+    alert("Text has been copied!");
+}
+</script>
+</html>
